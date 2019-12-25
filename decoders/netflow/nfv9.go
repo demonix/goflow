@@ -99,6 +99,11 @@ const (
 	NFV9_FIELD_layer2packetSectionOffset    = 102
 	NFV9_FIELD_layer2packetSectionSize      = 103
 	NFV9_FIELD_layer2packetSectionData      = 104
+	NFV9_FIELD_udpSourcePort                = 180
+	NFV9_FIELD_udpDestinationPort           = 181
+	NFV9_FIELD_tcpSourcePort                = 182
+	NFV9_FIELD_tcpDestinationPort           = 183
+	
 )
 
 type NFv9Packet struct {
@@ -231,13 +236,17 @@ func NFv9TypeToString(typeId uint16) string {
 		104: "layer2packetSectionData",
 		234: "ingressVRFID",
 		235: "egressVRFID",
+	    180: "",
+		181: "udpudpSourcePortDestinationPort",
+		182: "tcpSourcePort ",
+		183: "tcpDestinationPort",
 	}
 
-	if typeId > 104 || typeId == 0 {
-		return "Unassigned"
-	} else {
-		return nameList[typeId]
+	typeName, found :=  nameList[typeId]
+	if found {
+	   return typeName
 	}
+	return "Unassigned"
 }
 
 func NFv9ScopeToString(scopeId uint16) string {

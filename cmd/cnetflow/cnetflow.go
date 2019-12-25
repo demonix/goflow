@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/cloudflare/goflow/transport"
-	"github.com/cloudflare/goflow/utils"
+	"github.com/demonix/goflow/transport"
+	"github.com/demonix/goflow/utils"
 	log "github.com/sirupsen/logrus"
 	"os"
 	"runtime"

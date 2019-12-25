@@ -46,6 +46,11 @@ message FlowMessage {
   uint32 SrcPort = 21;
   uint32 DstPort = 22;
 
+  uint32 UdpSrcPort       = 180;
+  uint32 UdpDstPort       = 181;
+  uint32 TcpSrcPort       = 182;
+  uint32 TcpDstPort       = 183;
+  
   // Interfaces
   uint32 SrcIf = 18;
   uint32 DstIf = 19;
@@ -115,5 +120,9 @@ message FlowMessage {
 
   // Custom fields: start after ID 1000:
   // uint32 MyCustomField = 1000;
+
+  string SrcIpStr = 1001;
+  string DstIpStr = 1002;
+  
 
 }

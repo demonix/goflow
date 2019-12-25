@@ -3,8 +3,8 @@ package producer
 import (
 	"encoding/binary"
 	"errors"
-	"github.com/cloudflare/goflow/decoders/netflowlegacy"
-	flowmessage "github.com/cloudflare/goflow/pb"
+	"github.com/demonix/goflow/decoders/netflowlegacy"
+	flowmessage "github.com/demonix/goflow/pb"
 	"net"
 )
 

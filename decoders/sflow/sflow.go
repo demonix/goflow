@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/cloudflare/goflow/decoders/utils"
+	"github.com/demonix/goflow/decoders/utils"
 )
 
 const (

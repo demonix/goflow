@@ -1,7 +1,7 @@
 package transport
 
 import (
-	flowmessage "github.com/cloudflare/goflow/pb"
+	flowmessage "github.com/demonix/goflow/pb"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

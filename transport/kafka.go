@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	flowmessage "github.com/cloudflare/goflow/pb"
-	"github.com/cloudflare/goflow/utils"
+	flowmessage "github.com/demonix/goflow/pb"
+	"github.com/demonix/goflow/utils"
 	proto "github.com/golang/protobuf/proto"
 
 	//"github.com/golang/protobuf/descriptor"

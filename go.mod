@@ -1,4 +1,4 @@
-module github.com/cloudflare/goflow
+module github.com/demonix/goflow
 
 go 1.12
 

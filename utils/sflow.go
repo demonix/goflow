@@ -2,9 +2,9 @@ package utils
 
 import (
 	"bytes"
-	"github.com/cloudflare/goflow/decoders/sflow"
-	flowmessage "github.com/cloudflare/goflow/pb"
-	"github.com/cloudflare/goflow/producer"
+	"github.com/demonix/goflow/decoders/sflow"
+	flowmessage "github.com/demonix/goflow/pb"
+	"github.com/demonix/goflow/producer"
 	"github.com/prometheus/client_golang/prometheus"
 	"net"
 	"time"

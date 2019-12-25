@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/cloudflare/goflow/decoders/netflow"
-	flowmessage "github.com/cloudflare/goflow/pb"
+	"github.com/demonix/goflow/decoders/netflow"
+	flowmessage "github.com/demonix/goflow/pb"
 	"net"
 	"sync"
 	"time"
@@ -173,6 +173,14 @@ func ConvertNetFlowDataSet(version uint16, baseTime uint32, uptime uint32, recor
 			DecodeUNumber(v, &(flowMessage.DstPort))
 		case netflow.NFV9_FIELD_PROTOCOL:
 			DecodeUNumber(v, &(flowMessage.Proto))
+		case netflow.NFV9_FIELD_udpSourcePort:
+			DecodeUNumber(v, &(flowMessage.UdpSrcPort))
+		case netflow.NFV9_FIELD_udpDestinationPort:
+			DecodeUNumber(v, &(flowMessage.UdpDstPort))
+		case netflow.NFV9_FIELD_tcpSourcePort:
+			DecodeUNumber(v, &(flowMessage.TcpSrcPort))
+		case netflow.NFV9_FIELD_tcpDestinationPort:
+			DecodeUNumber(v, &(flowMessage.TcpDstPort))
 
 		// Network
 		case netflow.NFV9_FIELD_SRC_AS:
